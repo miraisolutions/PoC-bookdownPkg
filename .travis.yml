@@ -1,6 +1,5 @@
 language: r
 cache: packages
-before_cache: Rscript -e 'remotes::install_cran("bookdown")'
 
 after_success:
 - R CMD INSTALL $PKG_TARBALL
