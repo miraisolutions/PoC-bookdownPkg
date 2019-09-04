@@ -13,5 +13,5 @@ render_site <- function(..., output_dir = "_site") {
   input_dir <- system.file("site", package = "PoCbookdownPkg")
   restore_dir <- setwd(input_dir) # returns the wd before the call
   on.exit(setwd(restore_dir))
-  bookdown::render_book(".", output_dir = output_dir, clean_envir = FALSE, ...)
+  fakebookdown::render_book(".", output_dir = output_dir, clean_envir = FALSE, ...)
 }
