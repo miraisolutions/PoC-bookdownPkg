@@ -1,9 +1,9 @@
 language: r
 cache: packages
 
-after_success:
+before_deploy:
 - R CMD INSTALL $PKG_TARBALL
-- Rscript -e "PoCbookdownPkg::render_site()"
+- Rscript -e "PoCbookdownPkg::render_site(); stop('error')"
 
 deploy:
   provider: pages
