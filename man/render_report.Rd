@@ -7,7 +7,7 @@
 render_report(report, ..., output_dir = ".")
 }
 \arguments{
-\item{report}{see [report_path()]}
+\item{report}{see \code{\link[=report_path]{report_path()}}}
 
 \item{...}{additional arguments to be passed to rmarkdown::render .}
 
