@@ -24,6 +24,12 @@ report_path <- function(report) {
 #'
 #' @return None
 #'
+#' @examples
+#' output <- render_report(
+#'   "ith-report", params = list(i = 12358L), output_dir = tempfile()
+#' )
+#' if (interactive()) browseURL(output)
+#'
 #' @export
 render_report <- function(report, ..., output_dir = ".") {
   rmarkdown::render(report_path(report), output_dir = output_dir, ..., )

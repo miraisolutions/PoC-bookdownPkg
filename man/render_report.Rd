@@ -19,3 +19,10 @@ None
 \description{
 Wrapper around rmarkdown::render to render a report.
 }
+\examples{
+output <- render_report(
+  "ith-report", params = list(i = 12358L), output_dir = tempfile()
+)
+if (interactive()) browseURL(output)
+
+}
