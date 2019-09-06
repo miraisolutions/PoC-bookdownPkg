@@ -1,5 +1,5 @@
 ---
-title: "Analysis of delays for interation `r params$i`"
+title: "Report for interation `r params$i`"
 output: html_document
 params:
   i: NULL
