@@ -2,18 +2,16 @@
 % Please edit documentation in R/report.R
 \name{report_path}
 \alias{report_path}
-\title{Construct Report Path}
+\title{Report Path}
 \usage{
 report_path(report)
 }
 \arguments{
-\item{report}{character string indicating name of the report without extension.}
+\item{report}{The name of the report, without the \code{".Rmd"} extension.}
 }
 \value{
-caracther string indicating the path to the given report.
-
-None
+The path to the desired R Markdown file.
 }
 \description{
-Function to construct a path for a given report
+Construct the path to the R Markdown source file of a given report.
 }

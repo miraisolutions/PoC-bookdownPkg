@@ -1,12 +1,10 @@
-#' Construct Report Path
+#' Report Path
 #'
-#' Function to construct a path for a given report
+#' Construct the path to the R Markdown source file of a given report.
 #'
-#' @param report character string indicating name of the report without extension.
+#' @param report The name of the report, without the `".Rmd"` extension.
 #'
-#' @return caracther string indicating the path to the given report.
-#'
-#' @return None
+#' @return The path to the desired R Markdown file.
 #'
 #' @export
 report_path <- function(report) {
@@ -16,13 +14,13 @@ report_path <- function(report) {
 
 #' Render Report
 #'
-#' Wrapper around rmarkdown::render to render a report.
+#' Render a given report to HTML.
 #'
-#' @param report see [report_path()]
-#' @param output_dir string indicating directory where to render html files for website. Default is ".".
-#' @param ... additional arguments to be passed to rmarkdown::render .
+#' @inheritParams report_path
+#' @param output_dir The output directory for the rendered report.
+#' @param ... Additional arguments to be passed to [rmarkdown::render()].
 #'
-#' @return None
+#' @return The path to the produced report.
 #'
 #' @examples
 #' output <- render_report(

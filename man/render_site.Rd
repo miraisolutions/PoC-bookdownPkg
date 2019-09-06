@@ -7,10 +7,12 @@
 render_site(..., output_dir = "_site")
 }
 \arguments{
-\item{...}{additional arguments to be passed to bookdown::render_book .}
+\item{...}{Additional arguments to be passed to \code{\link[bookdown:render_book]{bookdown::render_book()}}.}
 
-\item{output_dir}{string indicating directory where to render html files for website. Default is "_site".}
+\item{output_dir}{The output directory where the website is created. Defaults
+to \code{"_site"}.}
 }
 \description{
-Function that would create website using bookdown::render_book.
+Create a website as collection of reports. This is currently done using the
+\strong{\link[bookdown:bookdown]{bookdown}} package.
 }
