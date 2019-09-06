@@ -7,15 +7,22 @@
 render_report(report, ..., output_dir = ".")
 }
 \arguments{
-\item{report}{see [report_path()]}
+\item{report}{The name of the report, without the \code{".Rmd"} extension.}
 
-\item{...}{additional arguments to be passed to rmarkdown::render .}
+\item{...}{Additional arguments to be passed to \code{\link[rmarkdown:render]{rmarkdown::render()}}.}
 
-\item{output_dir}{string indicating directory where to render html files for website. Default is ".".}
+\item{output_dir}{The output directory for the rendered report.}
 }
 \value{
-None
+The path to the produced report.
 }
 \description{
-Wrapper around rmarkdown::render to render a report.
+Render a given report to HTML.
+}
+\examples{
+output <- render_report(
+  "ith-report", params = list(i = 12358L), output_dir = tempfile()
+)
+if (interactive()) browseURL(output)
+
 }

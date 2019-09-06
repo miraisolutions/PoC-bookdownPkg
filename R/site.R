@@ -1,9 +1,11 @@
 #' Render Site
 #'
-#' Function that would create website using bookdown::render_book.
+#' Create a website as collection of reports. This is currently done using the
+#' **[bookdown][bookdown::bookdown]** package.
 #'
-#' @param output_dir string indicating directory where to render html files for website. Default is "_site".
-#' @param ... additional arguments to be passed to bookdown::render_book .
+#' @param output_dir The output directory where the website is created. Defaults
+#'   to `"_site"`.
+#' @param ... Additional arguments to be passed to [bookdown::render_book()].
 #'
 #' @export
 render_site <- function(..., output_dir = "_site") {
