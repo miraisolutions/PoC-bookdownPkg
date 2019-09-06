@@ -8,7 +8,7 @@ PoC of a package with a GitHub Pages website and TravisCI integration, including
 functionality to render individual reports and a website.
 
 ## Usage
-### Render a prametrized report
+### Render a parametrized report
 
 ```r
 browseURL(render_report("ith-report", params = list(i = "iteration XYZ")))
