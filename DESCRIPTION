@@ -1,13 +1,14 @@
 Package: PoCbookdownPkg
-Title: What the Package Does (One Line, Title Case)
+Title: Package and bookdown PoC
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Mirai",
+           family = "Labs",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "labs@mirai-solutions.com")
+Description: PoC of a package with a GitHub Pages website and TravisCI 
+    integration, including functionality to render individual reports and a 
+    website.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
