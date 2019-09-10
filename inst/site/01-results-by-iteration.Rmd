@@ -4,7 +4,7 @@ SSSS
 
 ```{r, echo=FALSE, results='asis'}
 for (i in 1:10) {
-  params <- list(line = line)
+  params <- list(i = i)
   cat(knitr::knit_child(
     PoCbookdownPkg::report_path("ith-report"),
     quiet = TRUE
