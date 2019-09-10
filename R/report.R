@@ -9,7 +9,7 @@
 #' @export
 report_path <- function(report) {
   report <- sprintf("%s.Rmd", report)
-  file.path(system.file("reports", report, package = "PoCbookdownPkg"))
+  system.file("reports", report, package = "PoCbookdownPkg")
 }
 
 #' Render Report
