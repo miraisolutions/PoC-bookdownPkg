@@ -9,4 +9,6 @@ params:
 
 Results for iteration `r params$i`
 
-
+```{r, echo = FALSE}
+summary(subset(flights6, month == params$i))
+```
