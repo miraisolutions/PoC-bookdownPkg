@@ -10,5 +10,5 @@ params:
 Summary statistics for `r month.name[params$i]`
 
 ```{r, echo = FALSE}
-summary(subset(flights6, month == params$i))
+summary(get_month_data(month = params$i))
 ```
