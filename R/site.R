@@ -12,8 +12,14 @@ render_site <- function(..., output_dir = "_site") {
   # absolute path of output_dir (which must exist)
   dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
   output_dir <- normalizePath(output_dir)
-  input_dir <- system.file("site", package = "PoCbookdownPkg")
+  # render the book from a copy of the installed site files, in order not to
+  # mess up with the library and make sure they are on the same mount as
+  # output_dir, as render_book() uses file.rename()
+  input_dir <- file.path(tempfile("_input", output_dir), "site")
+  on.exit(unlink(dirname(input_dir), recursive = TRUE))
+  dir.create(input_dir, recursive = TRUE)
+  file.copy(system.file("site", package = "PoCbookdownPkg"), dirname(input_dir), recursive = TRUE)
   restore_dir <- setwd(input_dir) # returns the wd before the call
-  on.exit(setwd(restore_dir))
+  on.exit(setwd(restore_dir), add = TRUE)
   bookdown::render_book(".", output_dir = output_dir, clean_envir = FALSE, ...)
 }
