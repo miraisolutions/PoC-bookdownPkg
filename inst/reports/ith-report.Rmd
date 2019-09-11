@@ -1,12 +1,14 @@
 ---
-title: "Report for interation `r params$i`"
+title: "Report for `r month.name[params$i]`"
 output: html_document
 params:
   i: NULL
 ---
 
-## Iteration `r params$i`
+## `r month.name[params$i]` flights
 
-Results for iteration `r params$i`
+Summary statistics for `r month.name[params$i]`
 
-
+```{r, echo = FALSE}
+summary(get_month_data(month = params$i))
+```

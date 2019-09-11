@@ -1,10 +1,10 @@
-# Iteration specific results
+# Month specific results
 
 SSSS
 
 ```{r, echo=FALSE, results='asis'}
-for (i in sprintf("%d (iteration)", 1:10)) {
-  params <- list(line = line)
+for (i in 1:10) {
+  params <- list(i = i)
   cat(knitr::knit_child(
     PoCbookdownPkg::report_path("ith-report"),
     quiet = TRUE
