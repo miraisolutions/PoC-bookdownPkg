@@ -13,7 +13,6 @@ render_site <- function(..., output_dir = "_site") {
   dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
   output_dir <- normalizePath(output_dir)
   # clean up output dir if already present
-  unlink(output_dir, recursive = TRUE)
   # render the book from a copy of the installed site files, in order not to
   # mess up with the library and make sure they are on the same mount as
   # output_dir, as render_book() uses file.rename()
