@@ -3,7 +3,7 @@
 SSSS
 
 ```{r, echo=FALSE, results='asis'}
-for (i in 1:10) {
+for (i in 1:12) {
   params <- list(i = i)
   cat(knitr::knit_child(
     PoCbookdownPkg::report_path("ith-report"),

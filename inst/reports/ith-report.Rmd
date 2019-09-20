@@ -10,5 +10,10 @@ params:
 Summary statistics for `r month.name[params$i]`
 
 ```{r, echo = FALSE}
+with(head(get_month_data(params$i), 100), plot(dep_time, sched_dep_time))
+```
+
+```{r, echo = FALSE}
 summary(get_month_data(month = params$i))
 ```
+
