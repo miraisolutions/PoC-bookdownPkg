@@ -4,7 +4,7 @@ cache: packages
 before_deploy:
 - R CMD INSTALL $PKG_TARBALL
 - Rscript -e "PoCbookdownPkg::render_site()"
-# - touch _site/.nojekyll
+- touch _site/.nojekyll
 
 deploy:
   provider: pages
