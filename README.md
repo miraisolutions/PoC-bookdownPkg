@@ -1,7 +1,7 @@
 # PoC-bookdownPkg
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/miraisolutions/PoCbookdownPkg.svg?branch=master)](https://travis-ci.org/miraisolutions/PoCbookdownPkg)
+[![Travis build status](https://travis-ci.com/miraisolutions/PoCbookdownPkg.svg?branch=master)](https://travis-ci.com/miraisolutions/PoCbookdownPkg)
 <!-- badges: end -->
 
 PoC of a package with a GitHub Pages website and TravisCI integration, including
